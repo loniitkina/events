@@ -291,13 +291,8 @@ for fname in fnames:
     tt_cum = np.cumsum(np.ma.fix_invalid(tt,fill_value=0))
     
     #pole hole
-    print(tt_cum)
     pole_hole=tt_cum.mask
-    print(pole_hole)
-    
     dt_luisa = np.ma.array(dt_luisa,mask=pole_hole)
-    print(dt_luisa)
-    #exit()
 
     idx=fname.split('_')[-3]
     if idx=='100km':
